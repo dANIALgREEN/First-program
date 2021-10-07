@@ -21,7 +21,7 @@ bool PlayGame(int Difficulty) {
     std::cout << "+ Sum of this numbers is ---->" << CodeSum;
     std::cout << "\n+ Product of this numbers is ---->" << CodeProduct;
     std::cout << "\n+ First number is ---->" << NumA << std::endl;
-    std::cout << "Enter the correct code\n";
+    std::cout << "Enter the correct code separated by spaces\n";
 
     int GuessA, GuessB, GuessC;
     std::cin >> GuessA >> GuessB >> GuessC;
@@ -29,7 +29,7 @@ bool PlayGame(int Difficulty) {
     int GuessSum = GuessA + GuessB + GuessC;
     int GuessProduct = GuessA * GuessB * GuessC;
 
-    if (GuessA == NumA && GuessB == NumB && GuessC == NumC) 
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct && GuessA == NumA) 
     {
         std::cout << "\nThe bomb finaly hacked!! Going to the next lvl.";
         return true;
